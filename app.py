@@ -1,15 +1,12 @@
 import streamlit as st
 
-# Title
+def calculate_square_and_cube(number):
+    return number ** 2, number ** 3
+
 st.title("Square and Cube Calculator")
 
-# User input
 number = st.number_input("Enter a number", value=0.0)
+square, cube = calculate_square_and_cube(number)
 
-# Calculations
-square = number ** 2
-cube = number ** 3
-
-# Display results
 st.write(f"**Square** of {number} is: `{square}`")
 st.write(f"**Cube** of {number} is: `{cube}`")
